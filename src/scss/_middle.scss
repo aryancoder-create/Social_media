@@ -1,0 +1,81 @@
+.middle-container-1{
+    display: flex;
+      overflow-x: auto;
+      padding: 12px 8px;
+      // background: #000;
+      gap: 4px;
+}
+
+
+
+
+
+/* StoryCircle.css */
+.story-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 8px;
+  position: relative;
+}
+
+.outer-circle {
+  width: 78px;
+  height: 78px;
+  
+  /* Important gradient border */
+  background: conic-gradient(
+    from 0deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5,
+    #feda75
+  );
+  
+  border-radius: 50%;
+  padding: 4px;           /* ← this controls border thickness */
+}
+
+.inner-circle {
+  width: 100%;
+  height: 100%;
+  background: white;      /* or black if dark theme */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;           /* inner white ring thickness */
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white; /* extra white border like Instagram */
+}
+
+.username {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #262626;
+  text-align: center;
+  max-width: 78px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.live-badge {
+  position: absolute;
+  bottom: 28px;
+  background: #c13584;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
