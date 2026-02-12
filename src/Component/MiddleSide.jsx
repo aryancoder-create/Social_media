@@ -1,57 +1,75 @@
-import React from 'react'
+import React from "react";
+import pic3 from "../assets/pic3.jpg";
+import pic1 from '../assets/pic1.jpg'
+import pic2 from '../assets/pic2.jpg'
+import pic4 from '../assets/pic4.jpg'
+import pic5 from '../assets/pic5.jpg'
 import pic6 from '../assets/pic6.jpg'
 import pic7 from '../assets/pic7.jpg'
 import pic8 from '../assets/pic8.jpg'
 import pic9 from '../assets/pic9.jpg'
 import pic10 from '../assets/pic10.jpg'
 import pic11 from '../assets/pic11.jpg'
-
-import middlecard from '../Component/Middle_card'
-import Middle_card from '../Component/Middle_card'
+import Middle_card from "./Middle_card";
+import PostFeed from "./PostFeed";
 const MiddleSide = () => {
-    const stories =[
-        {
-            username:"sameer raj",
-            image:pic6
-        },
-        {username:'doremon',
-            image:pic7
-        },
-        {
-        username:'chhota bheem',
-        image:pic8
-        }
-        ,{
-            username:'pokemon',
-            image:pic9
-        },
-        {username:'UB',
-            image:pic10
-        },
-        {
-            username:'motu_patlu',
-            image:pic11
-        },
-    ]
+  const storiescard = [
+    {
+      storiesimage:pic1,
+      storiesusername:"Aryan"
+    },
+    {
+      storiesimage:pic2,
+      storiesusername:"Aryan"
+    },
+    {
+      storiesimage:pic3,
+      storiesusername:"Aryan"
+    },
+    {
+      storiesimage:pic4,
+      storiesusername:"Aryan"
+    },
+    {
+      storiesimage:pic5,
+      storiesusername:"Aryan"
+    },
+    {storiesimage:pic6,
+      storiesusername:"Aryan"
+    },
+    {
+      storiesimage:pic7,
+      storiesusername:"Aryan"
+    },
+    {
+      storiesimage:pic8,
+      storiesusername:"Aryan"
+    },
+    {
+      storiesimage:pic9,
+      storiesusername:"Aryan" 
+    },
+    {
+       storiesimage:pic10,
+      storiesusername:"Aryan"
+    },
+  ]
   return (
-   <div style={{
-      display: 'flex',
-      overflowX: 'auto',
-      padding: '12px 8px',
-      background: '#000',
-      gap: '4px'
-    }}>
-      {stories.map((story, i) => (
-        <Middle_card
-          key={i}
-          imageUrl={story.image}
-          username={story.username}
-          // isLive={i === 1}   ← uncomment if you want LIVE badge
-        />
-      ))}
+    <div className="middle-wrapper">
+ <div  className="stories-parent">
+    {storiescard.map((story,index) =>(
+      <Middle_card 
+      key={index}
+      storiesimage ={story.storiesimage}
+      storiesusername={story.storiesusername}/>
+    ))}
+ 
+   </div>
+      <PostFeed/>
+
     </div>
+  
   );
-}
+};
 
-
-export default MiddleSide
+export default MiddleSide;

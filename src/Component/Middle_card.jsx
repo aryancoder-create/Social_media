@@ -1,25 +1,20 @@
 import React from 'react'
-
-const Middle_card = ({imageUrl, username, isLive = false  }) => {
+import pic1 from'../assets/pic1.jpg'
+const Middle_card = (props) => {
   return (
-   <div className="story-item">
-      <div className="outer-circle">
-        <div className="inner-circle">
-          <img 
-            src={imageUrl} 
-            alt={username} 
-            className="profile-img"
-          />
-        </div>
-      </div>
-      
-      {isLive && <span className="live-badge">LIVE</span>}
-      
-      <p className="username">{username}</p>
-    </div>
-  
-
-
+   
+         <div className="storyblock">
+           <div className="stories-image">
+         
+               <img src={props.  storiesimage} alt="" className='story-imag' />
+             </div>
+               <span className="story-username">{props. storiesusername}</span>
+           </div>
+           
+           
+          
+         
+       
   )
 }
 
